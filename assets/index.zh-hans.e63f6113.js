@@ -1,0 +1,150 @@
+var n=`# \u5185\u7F6E\u63D2\u4EF6
+
+Milkdown \u6709\u8BB8\u591A\u5185\u7F6E\u63D2\u4EF6\uFF0C\u5B83\u4EEC\u63A7\u5236\u7740\u6574\u4E2A\u7F16\u8F91\u5668\u7684\u72B6\u6001\u3002
+\u8FD9\u91CC\u5217\u51FA\u4E86\u6BCF\u4E2A\u9636\u6BB5\u4E2D\u6267\u884C\u7684\u63D2\u4EF6\u4EE5\u53CA\u5B83\u4EEC\u7684\u5B9A\u65F6\u5668\u548C\u4E0A\u4E0B\u6587\u3002
+
+---
+
+## \u51C6\u5907\u9636\u6BB5
+
+\u5728\u8FD9\u4E2A\u9636\u6BB5\uFF0Cmilkdown \u5C06\u4F1A\u6536\u96C6 node \u548C mark \u4EE5\u53CA\u6240\u6709\u7684\u7528\u6237\u914D\u7F6E\u3002
+
+### Config
+
+-   \u540D\u79F0\uFF1A**config**
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **Config**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Init
+
+-   \u540D\u79F0\uFF1A**init**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **initTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **Config**
+    -   **editorCtx**: \u4FDD\u5B58\u7F16\u8F91\u5668\u7C7B\u7684\u5B9E\u4F8B\u3002
+    -   **remarkCtx**: \u4FDD\u5B58 remark \u5B9E\u4F8B\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **Initialize**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+---
+
+## \u52A0\u8F7D Node \u548C Mark
+
+\u5728\u8FD9\u4E2A\u9636\u6BB5\uFF0Cmilkdown \u5C06\u4F1A\u52A0\u8F7D node \u548C mark \u5E76\u6839\u636E\u5B83\u4EEC\u751F\u6210\u6570\u636E\u7ED3\u6784\uFF0C\u4F8B\u5982 schema \u548C\u5FEB\u6377\u952E\u3002
+
+### Schema
+
+-   \u540D\u79F0\uFF1A**schema**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **schemaTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **Initialize**
+    -   **nodesCtx**: \u4FDD\u5B58\u7F16\u8F91\u5668\u7684 node \u5217\u8868\u3002
+    -   **marksCtx**: \u4FDD\u5B58\u7F16\u8F91\u5668\u7684 mark \u5217\u8868\u3002
+    -   **schemaCtx**: \u4FDD\u5B58 prosemirror schema\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **SchemaReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Commands
+
+-   \u540D\u79F0\uFF1A**commands**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **commandsTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaReady**
+    -   **commandsCtx**: \u6CE8\u518C\u6216\u8FD0\u884C\u547D\u4EE4\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **CommandsReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Parser
+
+-   \u540D\u79F0\uFF1A**parser**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **parserTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaRead**
+    -   **parserCtx**: \u4FDD\u5B58 markdown \u89E3\u6790\u5668\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **ParserReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Serializer
+
+-   \u540D\u79F0\uFF1A**serializer**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **serializerTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaRead**
+    -   **serializerCtx**: \u4FDD\u5B58 markdown \u5E8F\u5217\u5316\u5668\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **SerializerReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Node View
+
+-   \u540D\u79F0\uFF1A**nodeView**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **nodeViewTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaRead**
+    -   **nodeViewCtx**: \u4FDD\u5B58 prosemirror \u7684 node view \u6620\u5C04\u8868\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **NodeViewReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Keymap
+
+-   \u540D\u79F0\uFF1A**keymap**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **keymapTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaRead**
+    -   **keymapCtx**: \u4FDD\u5B58 prosemirror \u7684 keymap \u5217\u8868\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **KeymapReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Input Rules
+
+-   \u540D\u79F0\uFF1A**inputRules**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **inputRulesTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **SchemaRead**
+    -   **inputRulesCtx**: \u4FDD\u5B58 prosemirror \u7684 input rules \u5217\u8868\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **InputRulesReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+---
+
+## Create Editor
+
+\u5728\u8FD9\u4E2A\u9636\u6BB5\uFF0Cmilkdown \u5C06\u4F1A\u521B\u5EFA prosemirror \u7684 editor state \u548C editor view\u3002
+
+### Editor State
+
+-   \u540D\u79F0\uFF1A**editorState**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **editorStateTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **KeymapReady**
+        -   **InputRulesReady**
+        -   **ParserReady**
+        -   **SerializerReady**
+    -   **editorStateCtx**: \u4FDD\u5B58 prosemirror \u7684 editor state\u3002
+    -   **editorStateOptionsCtx**: \u4FDD\u5B58\u7528\u6237\u914D\u7F6E\u7684\u7528\u4E8E\u521B\u5EFA editor state \u7684\u53C2\u6570\u3002
+    -   **defaultValueCtx**: \u4FDD\u5B58\u4E86\u7528\u4E8E\u521B\u5EFA\u72B6\u6001\u7684\u9ED8\u8BA4\u503C\uFF0C\u53EF\u4EE5\u662F json, dom \u8282\u70B9\u6216 markdown \u5B57\u7B26\u4E32\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **EditorStateReady**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+
+### Editor View
+
+-   \u540D\u79F0\uFF1A**editorView**
+-   \u4E0A\u4E0B\u6587\uFF1A
+    -   **editorViewTimerCtx**: \u51B3\u5B9A\u52A0\u8F7D\u63D2\u4EF6\u7684\u65F6\u673A\u3002
+        \u9ED8\u8BA4\u503C\uFF1A
+        -   **NodeViewReady**
+        -   **EditorStateReady**
+    -   **editorViewCtx**: \u4FDD\u5B58 prosemirror \u7684 editor view\u3002
+    -   **editorViewOptionsCtx**: \u4FDD\u5B58\u7528\u6237\u914D\u7F6E\u7684\u7528\u4E8E\u521B\u5EFA editor view \u7684\u53C2\u6570\u3002
+    -   **rootCtx**: \u4FDD\u5B58\u4E86\u7528\u4E8E\u6302\u5728\u7F16\u8F91\u5668\u7684 dom \u8282\u70B9\u3002
+-   \u5B9A\u65F6\u5668\uFF1A
+    -   **Complete**: \u63D2\u4EF6\u6267\u884C\u5B8C\u6BD5\u3002
+`;export{n as default};

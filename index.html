@@ -1,31 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Milkdown</title>
-    <link rel="icon" type="image/svg" href="/milkdown/milkdown-mini.svg"/>
-    <link rel="apple-touch-icon" href="/milkdown/milkdown.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SG0L28XT8S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <title>Milkdown</title>
+        <meta name="title" content="Milkdown">
+        <meta name="description" content="Plugin Based WYSIWYG Markdown Editor Framework">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://milkdown.dev/">
+        <meta property="og:title" content="Milkdown">
+        <meta property="og:description" content="Plugin Based WYSIWYG Markdown Editor Framework">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://milkdown.dev/">
+        <meta property="twitter:title" content="Milkdown">
+        <meta property="twitter:description" content="Plugin Based WYSIWYG Markdown Editor Framework">
+        <link rel="icon" type="image/svg" href="/milkdown-mini.svg" />
+        <link rel="apple-touch-icon" href="/milkdown.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
 
-        gtag('config', 'G-SG0L28XT8S');
-    </script>
-    <script type="module" crossorigin src="/milkdown/assets/index.6d08d5a3.js"></script>
-    <link rel="modulepreload" href="/milkdown/assets/vendor.de2d8ede.js">
-    <link rel="stylesheet" href="/milkdown/assets/index.ecb6dfdb.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    
-  </body>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.css"
+            integrity="sha384-SkMvsJ0Np/CalM0X1hZCccQs6tnLq178/sGoPANiauambU0V/bloCaG3wOXfv+Ef"
+            crossorigin="anonymous"
+        />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SG0L28XT8S"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-SG0L28XT8S');
+        </script>
+
+        <script type="text/javascript">
+            // Single Page Apps for GitHub Pages
+            // MIT License
+            // https://github.com/rafgraph/spa-github-pages
+            // This script checks to see if a redirect is present in the query string,
+            // converts it back into the correct url and adds it to the
+            // browser's history using window.history.replaceState(...),
+            // which won't cause the browser to attempt to load the new url.
+            // When the single page app is loaded further down in this file,
+            // the correct url will be waiting in the browser's history for
+            // the single page app to route accordingly.
+            (function (l) {
+                if (l.search[1] === '/') {
+                    var decoded = l.search
+                        .slice(1)
+                        .split('&')
+                        .map(function (s) {
+                            return s.replace(/~and~/g, '&');
+                        })
+                        .join('?');
+                    window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+                }
+            })(window.location);
+        </script>
+      <script type="module" crossorigin src="/assets/index.bed80f8d.js"></script>
+      <link rel="modulepreload" href="/assets/vendor.0cbc6da8.js">
+      <link rel="stylesheet" href="/assets/index.21025bcb.css">
+    </head>
+    <body>
+        <div id="app"></div>
+        
+    </body>
 </html>
